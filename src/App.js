@@ -1,4 +1,3 @@
-
 import './App.css';
 import { useEffect, useState } from 'react';
 import Select from 'react-select'
@@ -35,9 +34,14 @@ function App() {
   return (
     <div className="App">
       <Select className='px-10 pt-10 py-5 capitalize' options={datas} onChange={(e) => handleChange(e.value)}></Select>
-      <button className='w-40 bg-black p-2 rounded-lg text-white' onClick={() => handleSubmit()} disabled={!userSelect}>{isShow ? "Hide Values" : "Show Values"}</button>
+      
+      <button className='w-40 bg-black p-2 rounded-lg text-white' onClick={() => handleSubmit()} disabled={!userSelect}>
+        {isShow ? "Hide Values" : "Show Values"}
+      </button>
+
       <br/>
       <br/>
+
       <h1 className='text-4xl font-bold underline capitalize'> {isShow ? userSelect: ""} </h1>
     </div>
   );
